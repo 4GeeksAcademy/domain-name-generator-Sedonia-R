@@ -1,14 +1,16 @@
-const chickenTraits = ["cowardly", "brave", "smart", "happy", "sad", "funny", "lazy", "emotional", "lonely"];
-const bios = [];
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
 
-for (let index = 0; index < chickenTraits.length; index++) {
-  for (let secondindex = 0; secondIndex < chickenTraits.length; secondIndex++) {
-    for (let thirdindex = 0; thirdIndex < chickenTraits.length; thirdIndex++)  {
-       bios.push(`${chickenTraits[index]}, ${chickenTraits[secondIndex]}, ${chickenTraits[thirdIndex]}`);
+const domains = [];
+for (let index = 0; index < pronoun.length; index++) {
+  for (let secondIndex = 0; secondIndex < adj.length; secondIndex++) {
+    for (let thirdIndex = 0; thirdIndex < noun.length; thirdIndex++) {
+      domains.push(`${pronoun[index]}${adj[secondIndex]}${noun[thirdIndex]}`);
     }
   }
 }
 
-for (const bio of bios) {
-  console.log("This is the story of a", bio, "chicken");
+for (const domain of domains) {
+  console.log(domain + ".com");
 }
